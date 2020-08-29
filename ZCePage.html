@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>注册页</title>
+    <title>1药网注册页</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/zCePage.css">
@@ -17,38 +17,165 @@
     <header><img src="img/yao_logo.png" alt="图片"></header>
     <section>
         <div class="title">
-            <h2>Hi, 欢迎注册!<span>我已经注册了,现在就<a href="#">登录</a></span></h2>
+            <h2>Hi, 欢迎注册!<span>我已经注册了,现在就<a href="DLvPage.html">登录</a></span></h2>
         </div>
         <img src="img/zc2.png" alt="" class="im-a">
         <div class="inputList">
-            <div class="list-a">
+            <div class="list-a" id="div1">
                 <span class="glyphicon glyphicon-user" id="span-a" aria-hidden="true"></span>
-                <input type="text" placeholder="手机号" class="input-a">
-                <span id="span-b">不能为空</span>
-                <span class="glyphicon glyphicon-info-sign" id="span-c" aria-hidden="true"></span>
+                <input type="text" placeholder="手机号" class="input-a" id="btn1">
+                <span class="span-b" id="a2">不能为空</span>
+                <span class="glyphicon glyphicon-ok-sign span-c" id="a1" aria-hidden="true"></span>
             </div>
-            <div class="list-a">
+            <p class="p-a" id="p1">手机号码格式不正确</p>
+            <div class="list-a" id="div2">
                 <span class="glyphicon glyphicon-lock" id="span-a" aria-hidden="true"></span>
-                <input type="password" placeholder="登录密码" class="input-a">
-                <span id="span-b">密码不能为空</span>
-                <span class="glyphicon glyphicon-ok-sign" id="span-d" aria-hidden="true"></span>
+                <input type="password" placeholder="登录密码" class="input-a" id="btn2">
+                <span class="span-b">密码不能为空</span>
+                <span class="glyphicon glyphicon-ok-sign span-d" id="b1" aria-hidden="true"></span>
             </div>
-            <div class="list-a">
+            <p class="p-a" id="p2">密码只能为6-20位字符</p>
+            <div class="list-a" id="div3">
                 <span class="glyphicon glyphicon-lock" id="span-a" aria-hidden="true"></span>
-                <input type="password" placeholder="确认密码" class="input-a">
-                <span id="span-b">新密码不能为空</span>
-                <span class="glyphicon glyphicon-ok-sign" id="span-d" aria-hidden="true"></span>
+                <input type="password" placeholder="确认密码" class="input-a" id="btn3">
+                <span class="span-b">新密码不能为空</span>
+                <span class="glyphicon glyphicon-ok-sign span-d" id="c1" aria-hidden="true"></span>
             </div>
-            <div class="list">
-                <div class="list-b">
-                    <input type="text" placeholder="验证码" class="input-a">
-                    <span class="glyphicon glyphicon-remove-sign" id="span-d" aria-hidden="true"></span>
-                    <span id="span-e"> abcd</span>
-                </div>
+            <p class="p-a" id="p3">两次密码输入不一致</p>
+            <div class="list-b">
+                <p>注册即代表你已同意1药网<a href="#">《服务协议》</a> 和 <a href="#">《隐私条款》</a></p>
+                <input type="button" value="注册" id="btn">
+            </div>
+            <div class="list-c">
+                <p>使用合作伙伴账号登录:</p>
+                <span class="glyphicon glyphicon-globe" aria-hidden="true" style="margin: 0;"></span>
+                <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-cd" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-adjust" aria-hidden="true"></span>
             </div>
         </div>
-
     </section>
+    <!-- 页脚    -->
+    <footer>
+        <div class="bottom_link">
+            <p><a href="//gangling.111.com.cn" rel="nofollow">关于111集团</a>|<a href="//www.111.com.cn/cmsPage/2015012602/" rel="nofollow">关于1药网</a>|<a href="//mall.yaoex.com" rel="nofollow">关于1药城</a>|<a href="http://ir.111.com.cn/" rel="nofollow">Investor Relations</a>|
+                <a href="//www.111.com.cn/cmsPage/2015012707/" rel="nofollow">诚聘英才</a>|<a href="//www.111.com.cn/cmsPage/2014022401/index.html" rel="nofollow">直营实体药房</a></p>
+            <p><a href="//www.111.com.cn/cmsPage/2013101401/" rel="nofollow">互联网药品信息服务资格证</a>|
+                <!--<a href="//www.111.com.cn/cmsPage/2013101402/" rel="nofollow">互联网药品交易资格证：粤C20150007</a>|--><a href="//www.111.com.cn/cmsPage/2014041703/" rel="nofollow">连锁营业执照</a>|<a href="//www.111.com.cn/cmsPage/2013101405/" rel="nofollow">药品营业许可证</a>|<a href="//www.111.com.cn/cmsPage/2013101407/" rel="nofollow">医疗器械许可证</a>|<a href="//www.111.com.cn/cmsPage/2013101404/"
+                    rel="nofollow">食品经营许可证</a>|<a href="//www.111.com.cn/cmsPage/2013101408/" rel="nofollow">GSP证书</a>|<a href="//www.111.com.cn/cmsPage/2015032501/" rel="nofollow">ICP粤B2-20150066</a></p>
+        </div>
+        <div class="copy_info">
+            <p>1药网网上药店，国家药监局认证通过的合法网上药店，中国医药电子商务行业的开拓者领跑者。<a href="http://www.beian.miit.gov.cn" style="color:#999">粤ICP备12015869号-1</a>
+                <!--<br/>公司名称：广东壹号大药房连锁有限公司 公司地址：广东省广州市越秀区共和西路1号2层 联系电话：020-31067218--></p>
+            <p><span>Copyright(C)2010-2015 1药网版权所有</span><span id="tub" class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010402000743" style="color:#999" rel="nofollow">公安备案号 440104020000743</a></span>
+            </p>
+        </div>
+    </footer>
 </body>
+<script>
+    $("#btn1").on("blur", function() {
+        console.log($(this).val())
+        let str = $(this).val();
+        var reg = /^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/;
+        if (str != /^$/) {
+            $("#p1").css({
+                "opacity": 0
+            })
+        }
+        if (reg.test(str)) {
+            $("#a1").css({
+                "display": "block"
+            })
+            $("#div1").css({
+                "borderColor": "#0083ce"
+            })
+        } else {
+            $("#a1").css({
+                "display": "none"
+            });
+        }
+        if (!reg.test(str)) {
+            $("#p1").css({
+                "opacity": 1
+            })
+            $("#div1").css({
+                "borderColor": "orange"
+            })
+        } else {
+            $("#p1").css({
+                "opacity": 0
+            })
+        }
+        return;
+    });
+
+    //密码框
+    $("#btn2").on("blur", function() {
+        console.log($(this).val())
+        let str2 = $(this).val();
+        var reg2 = /^[a-zA-Z][a-zA-Z0-9_]{6,20}$/;
+        if (str2 != /^$/) {
+            $("#p2").css({
+                "opacity": 0
+            })
+        }
+        if (reg2.test(str2)) {
+            $("#b1").css({
+                "display": "block"
+            })
+            $("#div2").css({
+                "borderColor": "#0083ce"
+            })
+        } else {
+            $("#b1").css({
+                "display": "none"
+            });
+        }
+        if (!reg2.test(str2)) {
+            $("#p2").css({
+                "opacity": 1
+            })
+            $("#div2").css({
+                "borderColor": "orange"
+            })
+        } else {
+            $("#p2").css({
+                "opacity": 0
+            })
+        }
+        return;
+    });
+
+    // 确认密码框
+    $("#btn3").on("blur", function() {
+        let str3 = $(this).val();
+        let str2 = $("#btn2").val();
+        if (str3 != /^$/) {
+            $("#p3").css({
+                "opacity": 0
+            })
+        }
+        if (str2 != str3) {
+            $("#p3").css({
+                "opacity": 1
+            })
+            $("#div3").css({
+                "borderColor": "orange"
+            })
+            $("#c1").css({
+                "display": "none"
+            })
+        } else {
+            $("#c1").css({
+                "display": "block"
+            })
+            $("#div3").css({
+                "borderColor": "#0083ce"
+            })
+        }
+    });
+</script>
 
 </html>
