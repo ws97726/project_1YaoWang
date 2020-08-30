@@ -221,10 +221,10 @@
                     <!-- 轮播（Carousel）项目 -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="img/lb1.jpg" alt="First slide">
+                            <img src="img/lb1.jpg" alt="First slide" id="lb1">
                         </div>
                         <div class="item">
-                            <img src="img/lb2.jpg" alt="Second slide">
+                            <img src="img/lb2.jpg" alt="Second slide" id="lb1">
                         </div>
                     </div>
                     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -234,10 +234,150 @@
                 </div>
             </div>
             <!-- 右侧列表 -->
-            <div class="block-rl"></div>
+            <div class="block-rl">
+                <p class="rp1"><span>在线咨询</span><span>医生问诊</span></p>
+                <div class="rd1">
+                    <a target="_self" href="#">男科 ></a></a>
+                    <a target="_self" href="#">妇科 ></a>
+                    <a target="_self" href="#">糖尿病 ></a>
+                    <a target="_self" href="#">心脑血管 ></a>
+                    <a target="_self" href="#">肝胆科 ></a>
+                    <a target="_self" href="#">神经科 ></a>
+                    <a target="_self" href="#">肿瘤 ></a>
+                    <a target="_self" href="#">消化科 ></a>
+                    <a target="_self" href="#">风湿骨科 ></a>
+                    <a target="_self" href="#">皮肤性病 ></a>
+                    <a target="_self" href="#">眼耳鼻喉 ></a>
+                    <a target="_self" href="#">呼吸科 ></a>
+                    <a target="_self" href="#">滋补保健 ></a>
+                    <a target="_self" href="#">散光验配 ></a>
+                    <a target="_self" href="#">医疗器械 ></a>
+                </div>
+                <div class="rd2">
+                    <img src="img/53.jpg" alt="">
+                </div>
+                <div class="rd3">
+                    <p>111集团</p>
+                    <img src="img/yyw_logo_icon.jpg" alt="">
+                    <img src="img/yyc_logo_icon.jpg" alt="">
+                </div>
+                <div class="rd4">
+                    <p class="rp1"><span>优质服务</span><span>公告</span><span>保险服务</span></p>
+                    <p class="rp2"><span>正</span><span>授</span><span>监</span><span>免</span></p>
+                    <p class="rp3"><span>正品保证</span><span>品牌授权</span><span>药监认证</span><span>满88包邮</span></p>
+                </div>
+            </div>
+        </div>
+        <!-- 2区块 -->
+        <div class="block2">
+            <!--时间 -->
+            <div class="lf">
+                <img src="img/js.png" alt="">
+            </div>
+            <div class="rl">
+                <ul>
+                    <li><img src="img/50.jpg" alt=""></li>
+                    <li><img src="img/51.jpg" alt=""></li>
+                    <li><img src="img/47.jpg" alt=""></li>
+                    <li><img src="img/52.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 楼梯 -->
+        <div id="floorNav">
+            <ul>
+                <li>1F<span>家庭常备药</span></li>
+                <li>2F<span>专科用药</span></li>
+                <li>3F<span>滋补保健</span></li>
+                <li>4F<span>维生素钙</span></li>
+                <li>5F<span>医疗器械</span></li>
+                <li>6F<span>隐形眼镜</span></li>
+                <li>7F<span>成人用品</span></li>
+                <li>8F<span>美妆个护</span></li>
+                <li>9F<span>母婴用品</span></li>
+                <li>TOP</li>
+            </ul>
+        </div>
+        <!-- 3区块 -->
+        <div id="sidebar">
+            <!-- 1F -->
+            <div class="oneF">
+                <p class="pf">1F 家庭常备药</p>
+            </div>
+            <!-- 2F -->
+            <div class="twoF">
+                <p class="pf">2F 专科用药</p>
+            </div>
+            <!-- 3F -->
+            <div class="threeF">
+                <p class="pf">3F 滋补保健</p>
+            </div>
+            <!-- 4F -->
+            <div class="fourF">
+                <p class="pf">4F 维生素钙</p>
+            </div>
+            <!-- 5F -->
+            <div class="fiveF">
+                <p class="pf">5F 医疗器械</p>
+            </div>
+            <!-- 6F -->
+            <div class="sixF">
+                <p class="pf">6F 隐形眼镜</p>
+            </div>
+            <!-- 7F -->
+            <div class="sevenF">
+                <p class="pf">7F 成人用品</p>
+            </div>
+            <!-- 8F -->
+            <div class="eightF">
+                <p class="pf">8F 美妆个护</p>
+            </div>
+            <!-- 9F -->
+            <div class="nineF">
+                <p class="pf">9F 母婴用品</p>
+            </div>
         </div>
 
     </section>
 </body>
+<script>
+    //楼梯 
+    $(function() {
+        $(window).scroll(function() {
+            var st = $(this).scrollTop();
+            $("#sidebar div").each(function() {
+                // console.log(this)
+                if (st >= $(this).offset().top - $(this).outerHeight() / 2) {
+                    var index = $(this).index();
+                    // console.log(index)
+                    // console.log($("#floorNav li"))
+                    $("#floorNav li").eq(index).addClass("hover")
+                        .siblings().removeClass("hover");
+                    $("#sidebar div p").eq(index).addClass("hover")
+                        .parent().siblings().children("p").removeClass("hover");
+
+                }
+            });
+            if ($(window).scrollTop() >= 750) {
+                $("#floorNav").fadeIn();
+            } else {
+                $("#floorNav").fadeOut();
+            }
+
+        });
+        $("#floorNav li:not(:last)").click(function() {
+            var index = $(this).index();
+            $("html,body").stop().animate({
+                "scrollTop": $("#sidebar div").eq(index).offset().top
+            }, 500);
+        })
+
+        $("#floorNav li").last().click(function() {
+            $("html").stop().animate({
+                scrollTop: 0
+            }, 500);
+        })
+    })
+</script>
 
 </html>
