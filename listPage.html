@@ -5,10 +5,1134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1药网列表页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/listPage.css">
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
+    <!-- <img src="img/timg.jpg" alt=""> -->
+    <!-- 头部 -->
+    <header>
+        <!-- 头部1 -->
+        <div class="headA">
+            <div class="headA_a">
+                <link type="text/css" rel="stylesheet" href="http://s.maiyaole.com/css/1_header_menu_1406.css" />
+                <div class="site-nav">
+                    <div class="site-nav-bd c_content">
+                        <ul class="site-nav-bd-l">
+                            <li class="menu">
+                                <div class="menu-hd"><a class="favorite" target="_self"><em></em><span>收藏本站</span></a>
+                                </div>
+                            </li>
+                            <li class="menu menu_last" id="btn">
+                                <div class="menu-hd province_box">
+                                    <span>送货至
+                                    <div class="city">
+                                    <ul>
+                                        <li>A 安徽</li>
+                                        <li>B 北京</li>
+                                        <li>C 重庆</li>
+                                        <li>G 广东 广西 贵阳 甘肃</li>
+                                        <li>F 福建</li>
+                                        <li>H 河北 黑龙江 海南 湖北 河南 湖南</li>
+                                        <li>J 江苏 吉林 江西</li>
+                                        <li>L 辽宁</li>
+                                        <li>N 内蒙古 宁夏</li>
+                                        <li>Q 青海</li>
+                                        <li>S 上海 山东 陕西 山西 四川</li>
+                                        <li>T 天津</li>
+                                        <li>X 西藏 新疆</li>
+                                        <li>Y 云南</li>
+                                        <li>Z 浙江</li>
+                                    </ul>
+                                </div></span>
+                                    <span id="usersProvince" class="province_name">河南</span>
+                                </div>
 
+                            </li>
+                        </ul>
+                        <ul class="site-nav-bd-r">
+                            <li class="menu">
+                                <div id="logininfo" class="menu-hd">
+                                    <a target="_self" class="red mr5" href="DLvPage.html" style="color: red; margin-right: 10px;"></a>
+                                    <a target="_self" href="ZCePage.html"></a>
+                                </div>
+                            </li>
+                            <li class="menu">
+                                <div class="menu-hd"><a href="DLvPage.html">我的订单</a></div>
+                            </li>
+                            <li class="menu">
+                                <div class="menu-hd head_order">
+                                    <a target="_self" class="myyaowang" href="DLvPage.html">我的1药网</a>
+                                </div>
+                            </li>
+                            <li class="menu">
+                                <div class="menu-hd"><a target="_blank" href="http://www.111.com.cn/cmsPage/2013073005/index.html" rel="nofollow">帮助中心</a></div>
+                            </li>
+                            <li class="menu">
+                                <div class="menu-hd"><a href="javascript:;">在线客服</a>
+                                </div>
+                            </li>
+                            <li class="menu li_none">
+                                <div class="menu-hd">
+                                    <div class="tellnumber">400-007-0958</div>
+                                </div>
+                            </li>
+                            <li class="menu menu_last">
+                                <div class="menu-hd head_app">
+                                    <a target="_blank" class="tell" href="javascript:void(0)" rel="nofollow"><em></em><span>手机APP</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 头部2-->
+        <div class="headB">
+            <div class="logo">
+                <img src="img/yyw_logo.png" alt="">
+                <a href="#">上 1 药 网<span>放 心 买 药</span></a>
+            </div>
+            <!-- 搜索 -->
+            <div class="search">
+                <div class="search-a">
+                    <p>
+                        <input type="text" placeholder="请输入商品名、症状、人群等">
+                    </p>
+                    <p id="sous"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></p>
+                </div>
+                <ul class="list">
+                    <li>阿胶</li>
+                    <li>感冒</li>
+                    <li>逍遥丸</li>
+                    <li>补肺丸</li>
+                    <li>妇炎洁</li>
+                    <li>血压汁</li>
+                    <li>护理液</li>
+                    <li>博路定</li>
+                </ul>
+                <img src="img/1.jpg" alt="">
+            </div>
+            <!-- 购物车 -->
+            <div class="dataa">
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                <a href="cartList.html">购物车 ></a></a>
+            </div>
+        </div>
+        <!-- 头部3 -->
+        <div class="headC">
+            <div class="headC_a">
+                <p><a href="listPage.html">所有商品分类</a></p>
+                <ul class="hc">
+                    <li><a href="SYePage.html">首页</a></li>
+                    <li><a href="listPage.html">家庭常备药</a></li>
+                    <li><a href="listPage.html" style="color: red;">传统滋补</a></li>
+                    <li><a href="listPage.html">男性健康</a></li>
+                    <li><a href="listPage.html">控制三高</a></li>
+                    <li><a href="listPage.html" style="color: red;">减肥</a></li>
+                    <li><a href="listPage.html">商家店铺</a></li>
+                    <li><a href="listPage.html">投资者关系</a></li>
+                    <li><a href="listPage.html">健康问答</a></li>
+                    <li><a href="listPage.html">咨询</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <section>
+        <!-- 一区块 -->
+        <div class="block1">
+            <!-- 左边 -->
+            <div class="block-lf">
+                <ul>
+                    <li>
+                        <span class="glyphicon glyphicon-erase" aria-hidden="true"></span>
+                        <a href="listPage.html">中西药品
+                        <div class="erJ">
+                            <dl class="er">
+                            <dt><a href="#" >男科疾病</a></dt>
+                        <dd>
+                            <a href="#" id="red">阳痿早泄</a>
+                            <a href="#">男性不育症</a>
+                            <a href="#">前列腺炎</a>
+                            <a href="#">肾病</a>
+                            <a href="#">泌尿系统疾病</a>
+                            <a href="#">补肾</a>
+                        </dd>
+                        <dt><a href="#" >滋补调养</a></dt>
+                        <dd>
+                            <a href="#">补血补气</a>
+                            <a href="#" id="red">补肾壮阳</a>
+                            <a href="#">减肥瘦身</a>
+                            <a href="#"> 增强抵抗力</a>
+                            <a href="#">安神助眠</a>
+                            <a href="#">免疫调节</a>
+                        </dd>
+                        <dt><a href="#">心脑血管</a></dt>
+                        <dd>
+                            <a href="#" id="red">高血压</a>
+                            <a href="#">脑血管病</a>
+                            <a href="#">冠心病</a>
+                            <a href="#">高血脂</a>
+                            <a href="#">心绞痛</a>
+                            <a href="#">静脉曲张</a>
+                            <a href="#">心力衰竭</a>
+                            <a hrf="#">血液病</a>
+                        </dd>
+                        <dt><a href="#">神经系统</a></dt>
+                        <dd>
+                            <a id="red" href="#">抑郁症</a>
+                            <a href="#">癫痫</a>
+                            <a href="#">帕金森</a>
+                            <a href="#">精神分裂症</a>
+                            <a href="#">老年痴呆</a>
+                            <a href="#">中风</a>
+                            <a href="#">神经性疼痛</a>
+                            <a href="#">多动症</a>
+                        </dd>
+                        <dt><a href="#">内分泌科</a></dt>
+                        <dd>
+                            <a id="red" href="#">糖尿病</a>
+                            <a href="#">甲状腺疾病</a>
+                        </dd>
+                        </dl>
+                        <dl class="er">
+                            <dt><a href="#">风湿骨科</a></dt>
+                            <dd>
+                                <a id="red" href="#">风湿类风湿</a>
+                                <a href="#">骨关节炎</a>
+                                <a href="#">跌打骨伤</a>
+                                <a href="#">腰椎病</a>
+                                <a href="#">骨质疏松</a>
+                                <a href="#">痛风</a>
+                                <a href="#">外用贴膏</a>
+                                <a href="#">器官移植</a>
+                                <a href="#">骨质增生</a>
+                                <a href="#">股骨头坏死</a>
+                            </dd>
+                            <dt><a href="#">皮肤病</a></dt>
+                            <dd>
+                                <a href="#">皮炎/湿疹/脚气</a>
+                                <a href="#">脱发</a>
+                                <a id="red" href="#">银屑病</a>
+                                <a href="#">痤疮</a>
+                                <a href="#">白癜风</a>
+                                <a href="#">尖锐湿疣</a>
+                                <a href="#">黄褐斑</a>
+                                <a href="#">疤痕</a>
+                                <a href="#">灰指甲</a>
+                                <a href="#">疱疹</a>
+                                <a href="#">烧烫创伤</a>
+                                <a href="#">过敏</a>
+                            </dd>
+                            <dt><a href="#">呼吸道疾病</a></dt>
+                            <dd>
+                                <a href="#">感冒发烧</a>
+                                <a href="#">咳嗽</a>
+                                <a href="#">上火</a>
+                                <a href="#">小儿感冒</a>
+                                <a href="#">哮喘</a>
+                                <a href="#">支气管炎</a>
+                                <a href="#">慢性阻塞性肺病</a>
+                            </dd>
+                            <dt><a href="#">肝胆科</a></dt>
+                            <dd>
+                                <a id="red" href="#">乙肝</a>
+                                <a href="#">保肝护肝</a>
+                                <a href="#">胆结石</a>
+                                <a href="#">免疫调节</a>
+                                <a href="#">肝纤维化肝硬化</a>
+                                <a href="#">胆道疾病</a>
+                                <a href="#">脂肪肝</a>
+                            </dd>
+                        </dl>
+                        <dl class="er">
+                            <dt><a href="#">消化系统疾病</a></dt>
+                            <dd>
+                                <a href="#">胃炎</a>
+                                <a href="#">胃肠溃疡</a>
+                                <a href="#" id="red">结肠炎</a>
+                                <a href="#">消化不良</a>
+                                <a href="#">便秘</a>
+                                <a href="#">腹泻</a>
+                                <a href="#">痔疮</a>
+                                <a href="#">小儿肠胃病</a>
+                            </dd>
+                            <dt><a href="#">五官科疾病</a></dt>
+                            <dd>
+                                <a id="red" href="" #>鼻炎</a>
+                                <a href="#">咽喉炎</a>
+                                <a href="#">眼干眼涩</a>
+                                <a href="#">眼部炎症</a>
+                                <a href="#">白内障</a>
+                                <a href="#">青光眼</a>
+                                <a href="#">耳聋耳鸣</a>
+                                <a href="#">口腔溃疡</a>
+                                <a href="#">牙周病痛</a>
+                                <a href="#">视网膜病变</a>
+                            </dd>
+                            <dt><a href="#">妇科疾病</a></dt>
+                            <dd>
+                                <a href="#">阴道炎</a>
+                                <a href="#">月经不调</a>
+                                <a id="red" href="#">避孕</a>
+                                <a href="#">保胎促孕</a>
+                                <a href="#">更年期</a>
+                                <a href="#">子宫疾病</a>
+                                <a href="#">乳腺疾病</a>
+                                <a href="#">盆腔炎</a>
+                            </dd>
+                            <dt><a href="#">肿瘤科</a></dt>
+                            <dd>
+                                <a id="red" href="#">肺癌</a>
+                                <a href="#">肝癌</a>
+                                <a href="#">胃癌</a>
+                                <a href="#">食道癌</a>
+                                <a href="#">淋巴癌</a>
+                                <a href="#">白血病</a>
+                                <a href="#">乳腺癌</a>
+                                <a href="#">化疗提高营养</a>
+                            </dd>
+                        </dl>
+            </div>
+            </a>
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
+                <a href="listPage.html">营养保健
+                        <div class="erJ2">
+                            <dl class="er">
+                                <dt><a href="#" >热门推荐</a></dt>
+                <dd>
+                    <a href="#" id="red">阳痿早泄</a>
+                    <a href="#">男性不育症</a>
+                    <a href="#">前列腺炎</a>
+                    <a href="#">肾病</a>
+                    <a href="#">泌尿系统疾病</a>
+                    <a href="#">补肾</a>
+                </dd>
+                <dt><a href="#" >健壮男人</a></dt>
+                <dd>
+                    <a href="#">补血补气</a>
+                    <a href="#" id="red">补肾壮阳</a>
+                    <a href="#">减肥瘦身</a>
+                    <a href="#"> 增强抵抗力</a>
+                    <a href="#">安神助眠</a>
+                    <a href="#">免疫调节</a>
+                </dd>
+                <dt><a href="#">美丽女人</a></dt>
+                <dd>
+                    <a href="#" id="red">美白瘦斑</a>
+                    <a href="#">脑血管病</a>
+                    <a href="#">冠心病</a>
+                    <a href="#">高血脂</a>
+                    <a href="#">心绞痛</a>
+                    <a href="#">静脉曲张</a>
+                    <a href="#">心力衰竭</a>
+                    <a hrf="#">血液病</a>
+                </dd>
+
+                </dl>
+                <dl class="er">
+                    <dt><a href="#">健康老人</a></dt>
+                    <dd>
+                        <a id="red" href="#"></a>
+                        <a href="#">骨关节炎</a>
+                        <a href="#">跌打骨伤</a>
+                        <a href="#">腰椎病</a>
+                        <a href="#">骨质疏松</a>
+                        <a href="#">痛风</a>
+                        <a href="#">外用贴膏</a>
+                        <a href="#">器官移植</a>
+                        <a href="#">骨质增生</a>
+                        <a href="#">股骨头坏死</a>
+                    </dd>
+                    <dt><a href="#">妇婴保健</a></dt>
+                    <dd>
+                        <a href="#">皮炎/湿疹/脚气</a>
+                        <a href="#">脱发</a>
+                        <a id="red" href="#">银屑病</a>
+                        <a href="#">痤疮</a>
+                        <a href="#">白癜风</a>
+                        <a href="#">尖锐湿疣</a>
+                        <a href="#">黄褐斑</a>
+                        <a href="#">疤痕</a>
+                        <a href="#">灰指甲</a>
+                        <a href="#">疱疹</a>
+                        <a href="#">烧烫创伤</a>
+                        <a href="#">过敏</a>
+                    </dd>
+                    <dt><a href="#">职场保健</a></dt>
+                    <dd>
+                        <a href="#">感冒发烧</a>
+                        <a href="#">咳嗽</a>
+                        <a href="#">上火</a>
+                        <a href="#">小儿感冒</a>
+                        <a href="#">哮喘</a>
+                        <a href="#">支气管炎</a>
+                        <a href="#">慢性阻塞性肺病</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd><img src="img/11.jpg" alt=""></dd>
+                    <dd><img src="img/23.jpg" alt=""></dd>
+                    <dd><img src="img/32.jpg" alt=""></dd>
+                </dl>
+        </div>
+        </a>
+        </li>
+        <li>
+            <span class="glyphicon glyphicon-pawn" aria-hidden="true"></span>
+            <a href="listPage.html">维生素钙
+                <div class="erJ3">
+                <dl class="er">
+                                <dt><a href="#" >维生素</a></dt>
+            <dd>
+                <a href="#" id="red">维生素A</a>
+                <a href="#">维生素B</a>
+                <a href="#">维生素C</a>
+                <a href="#">维生素D</a>
+                <a href="#">维生素E</a>
+                <a href="#">维生素F</a>
+            </dd>
+            <dt><a href="#" >钙剂</a></dt>
+            <dd>
+                <a href="#">补血补气</a>
+                <a href="#" id="red">补肾壮阳</a>
+                <a href="#">减肥瘦身</a>
+                <a href="#"> 增强抵抗力</a>
+                <a href="#">安神助眠</a>
+                <a href="#">免疫调节</a>
+            </dd>
+            <dt><a href="#">热销品牌</a></dt>
+            <dd>
+                <a href="#" id="red">美白瘦斑</a>
+                <a href="#">脑血管病</a>
+                <a href="#">冠心病</a>
+                <a href="#">高血脂</a>
+                <a href="#">心绞痛</a>
+                <a href="#">静脉曲张</a>
+                <a href="#">心力衰竭</a>
+                <a hrf="#">血液病</a>
+            </dd>
+
+            </dl>
+            <dl class="er">
+                <dt><a href="#">叶酸</a></dt>
+                <dd>
+                    <a id="red" href="#"></a>
+                    <a href="#">骨关节炎</a>
+                    <a href="#">跌打骨伤</a>
+                    <a href="#">腰椎病</a>
+                    <a href="#">骨质疏松</a>
+                    <a href="#">痛风</a>
+                    <a href="#">外用贴膏</a>
+                    <a href="#">器官移植</a>
+                    <a href="#">骨质增生</a>
+                    <a href="#">股骨头坏死</a>
+                </dd>
+                <dt><a href="#">矿物质</a></dt>
+                <dd>
+                    <a href="#">皮炎/湿疹/脚气</a>
+                    <a href="#">脱发</a>
+                    <a id="red" href="#">银屑病</a>
+                    <a href="#">痤疮</a>
+                    <a href="#">白癜风</a>
+                    <a href="#">尖锐湿疣</a>
+                    <a href="#">黄褐斑</a>
+                    <a href="#">疤痕</a>
+                    <a href="#">灰指甲</a>
+                    <a href="#">疱疹</a>
+                    <a href="#">烧烫创伤</a>
+                    <a href="#">过敏</a>
+                </dd>
+                <dt><a href="#">常见症状</a></dt>
+                <dd>
+                    <a href="#">感冒发烧</a>
+                    <a href="#">咳嗽</a>
+                    <a href="#">上火</a>
+                    <a href="#">小儿感冒</a>
+                    <a href="#">哮喘</a>
+                    <a href="#">支气管炎</a>
+                    <a href="#">慢性阻塞性肺病</a>
+                </dd>
+                <dt><a href="#">热销商家</a></dt>
+                <dd>
+                    <a href="#">感冒发烧</a>
+                    <a href="#">咳嗽</a>
+                    <a href="#">上火</a>
+                    <a href="#">小儿感冒</a>
+                    <a href="#">哮喘</a>
+                    <a href="#">支气管炎</a>
+                    <a href="#">慢性阻塞性肺病</a>
+                </dd>
+            </dl>
+            <dl>
+                <img src="img/37.jpg" alt="" style="margin: 30px;">
+                <img src="img/38.jpg" alt="" style="margin: 100px;">
+            </dl>
+            </div>
+            </a>
+        </li>
+        <li>
+            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+            <a href="listPage.html">隐形眼镜
+                        <div class="erJ4">
+                            <dl class="er">
+                                <dt><a href="#" >透明隐形眼镜</a></dt>
+            <dd>
+                <a href="#" id="red">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+            </dd>
+            <dt><a href="#" >彩色隐形眼镜</a></dt>
+            <dd>
+                <a href="#">补血补气</a>
+                <a href="#" id="red">补肾壮阳</a>
+                <a href="#">减肥瘦身</a>
+                <a href="#"> 增强抵抗力</a>
+                <a href="#">安神助眠</a>
+                <a href="#">免疫调节</a>
+            </dd>
+            <dt><a href="#">按周期找</a></dt>
+            <dd>
+                <a href="#" id="red">美白瘦斑</a>
+                <a href="#">脑血管病</a>
+                <a href="#">冠心病</a>
+                <a href="#">高血脂</a>
+                <a href="#">心绞痛</a>
+                <a href="#">静脉曲张</a>
+                <a href="#">心力衰竭</a>
+                <a hrf="#">血液病</a>
+            </dd>
+
+            </dl>
+            <dl class="er">
+                <dt><a href="#">隐形眼镜护理液</a></dt>
+                <dd>
+                    <a id="red" href="#"></a>
+                    <a href="#">骨关节炎</a>
+                    <a href="#">跌打骨伤</a>
+                    <a href="#">腰椎病</a>
+                    <a href="#">骨质疏松</a>
+                    <a href="#">痛风</a>
+                    <a href="#">外用贴膏</a>
+                    <a href="#">器官移植</a>
+                    <a href="#">骨质增生</a>
+                    <a href="#">股骨头坏死</a>
+                </dd>
+                <dt><a href="#">隐形眼镜伴侣</a></dt>
+                <dd>
+                    <a href="#">皮炎/湿疹/脚气</a>
+                    <a href="#">脱发</a>
+                    <a id="red" href="#">银屑病</a>
+                    <a href="#">痤疮</a>
+                    <a href="#">白癜风</a>
+                    <a href="#">尖锐湿疣</a>
+                    <a href="#">黄褐斑</a>
+                    <a href="#">疤痕</a>
+
+                </dd>
+                <dt><a href="#">功能眼镜</a></dt>
+                <dd>
+                    <a href="#">老花镜</a>
+
+                </dd>
+            </dl>
+            <dl>
+                <dt id="red">专家指导——健康美丽眼</dt>
+                <dd>
+                    <a href="#">第一次带隐形眼镜注意什么？</a>
+                </dd>
+            </dl>
+            </div>
+            </a>
+        </li>
+        <li>
+            <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+            <a href="listPage.html">医疗器械、健康电器
+                        <div class="erJ5">
+                            <dl class="er">
+                                <dt><a href="#" >维生素</a></dt>
+            <dd>
+                <a href="#" id="red">维生素A</a>
+                <a href="#">维生素B</a>
+                <a href="#">维生素C</a>
+                <a href="#">维生素D</a>
+                <a href="#">维生素E</a>
+                <a href="#">维生素F</a>
+            </dd>
+            <dt><a href="#" >钙剂</a></dt>
+            <dd>
+                <a href="#">补血补气</a>
+                <a href="#" id="red">补肾壮阳</a>
+                <a href="#">减肥瘦身</a>
+                <a href="#"> 增强抵抗力</a>
+                <a href="#">安神助眠</a>
+                <a href="#">免疫调节</a>
+            </dd>
+            <dt><a href="#">热销品牌</a></dt>
+            <dd>
+                <a href="#" id="red">美白瘦斑</a>
+                <a href="#">脑血管病</a>
+                <a href="#">冠心病</a>
+                <a href="#">高血脂</a>
+                <a href="#">心绞痛</a>
+                <a href="#">静脉曲张</a>
+                <a href="#">心力衰竭</a>
+                <a hrf="#">血液病</a>
+            </dd>
+
+            </dl>
+            <dl class="er">
+                <dt><a href="#">叶酸</a></dt>
+                <dd>
+                    <a id="red" href="#"></a>
+                    <a href="#">骨关节炎</a>
+                    <a href="#">跌打骨伤</a>
+                    <a href="#">腰椎病</a>
+                    <a href="#">骨质疏松</a>
+                    <a href="#">痛风</a>
+                    <a href="#">外用贴膏</a>
+                    <a href="#">器官移植</a>
+                    <a href="#">骨质增生</a>
+                    <a href="#">股骨头坏死</a>
+                </dd>
+                <dt><a href="#">矿物质</a></dt>
+                <dd>
+                    <a href="#">皮炎/湿疹/脚气</a>
+                    <a href="#">脱发</a>
+                    <a id="red" href="#">银屑病</a>
+                    <a href="#">痤疮</a>
+                    <a href="#">白癜风</a>
+                    <a href="#">尖锐湿疣</a>
+                    <a href="#">黄褐斑</a>
+                    <a href="#">疤痕</a>
+                    <a href="#">灰指甲</a>
+                    <a href="#">疱疹</a>
+                    <a href="#">烧烫创伤</a>
+                    <a href="#">过敏</a>
+                </dd>
+                <dt><a href="#">常见症状</a></dt>
+                <dd>
+                    <a href="#">感冒发烧</a>
+                    <a href="#">咳嗽</a>
+                    <a href="#">上火</a>
+                    <a href="#">小儿感冒</a>
+                    <a href="#">哮喘</a>
+                    <a href="#">支气管炎</a>
+                    <a href="#">慢性阻塞性肺病</a>
+                </dd>
+                <dt><a href="#">热销商家</a></dt>
+                <dd>
+                    <a href="#">感冒发烧</a>
+                    <a href="#">咳嗽</a>
+                    <a href="#">上火</a>
+                    <a href="#">小儿感冒</a>
+                    <a href="#">哮喘</a>
+                    <a href="#">支气管炎</a>
+                    <a href="#">慢性阻塞性肺病</a>
+                </dd>
+            </dl>
+            <dl>
+                <img src="img/37.jpg" alt="" style="margin: 30px;">
+                <img src="img/38.jpg" alt="" style="margin: 100px;">
+            </dl>
+            </div>
+            </a>
+        </li>
+        <li>
+            <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+            <a href="listPage.html">美妆个护
+                        <div class="erJ6">
+                            <dl class="er">
+                                <dt><a href="#" >透明隐形眼镜</a></dt>
+            <dd>
+                <a href="#" id="red">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+            </dd>
+            <dt><a href="#" >彩色隐形眼镜</a></dt>
+            <dd>
+                <a href="#">补血补气</a>
+                <a href="#" id="red">补肾壮阳</a>
+                <a href="#">减肥瘦身</a>
+                <a href="#"> 增强抵抗力</a>
+                <a href="#">安神助眠</a>
+                <a href="#">免疫调节</a>
+            </dd>
+            <dt><a href="#">按周期找</a></dt>
+            <dd>
+                <a href="#" id="red">美白瘦斑</a>
+                <a href="#">脑血管病</a>
+                <a href="#">冠心病</a>
+                <a href="#">高血脂</a>
+                <a href="#">心绞痛</a>
+                <a href="#">静脉曲张</a>
+                <a href="#">心力衰竭</a>
+                <a hrf="#">血液病</a>
+            </dd>
+
+            </dl>
+            <dl class="er">
+                <dt><a href="#">隐形眼镜护理液</a></dt>
+                <dd>
+                    <a id="red" href="#"></a>
+                    <a href="#">骨关节炎</a>
+                    <a href="#">跌打骨伤</a>
+                    <a href="#">腰椎病</a>
+                    <a href="#">骨质疏松</a>
+                    <a href="#">痛风</a>
+                    <a href="#">外用贴膏</a>
+                    <a href="#">器官移植</a>
+                    <a href="#">骨质增生</a>
+                    <a href="#">股骨头坏死</a>
+                </dd>
+                <dt><a href="#">隐形眼镜伴侣</a></dt>
+                <dd>
+                    <a href="#">皮炎/湿疹/脚气</a>
+                    <a href="#">脱发</a>
+                    <a id="red" href="#">银屑病</a>
+                    <a href="#">痤疮</a>
+                    <a href="#">白癜风</a>
+                    <a href="#">尖锐湿疣</a>
+                    <a href="#">黄褐斑</a>
+                    <a href="#">疤痕</a>
+
+                </dd>
+                <dt><a href="#">功能眼镜</a></dt>
+                <dd>
+                    <a href="#">老花镜</a>
+
+                </dd>
+            </dl>
+            <dl>
+                <dt id="red">专家指导——健康美丽眼</dt>
+                <dd>
+                    <a href="#">第一次带隐形眼镜注意什么？</a>
+                </dd>
+            </dl>
+            </div>
+            </a>
+        </li>
+        <li>
+            <span class="glyphicon glyphicon-pawn" aria-hidden="true"></span>
+            <a href="listPage.html">成人用品
+        <div class="erJ7">
+                            <dl class="er">
+                                <dt><a href="#" >热门推荐</a></dt>
+            <dd>
+                <a href="#" id="red">冈本003</a>
+                <a href="#">冈本透薄</a>
+                <a href="#">杜蕾斯24片</a>
+            </dd>
+            <dt><a href="#" >避孕套</a></dt>
+            <dd>
+                <a href="#" id="red">冈本</a>
+                <a href="#" id="red">杜蕾斯</a>
+            </dd>
+            </dl>
+            <dl class="er">
+                <dt><a href="#">排卵/试孕</a></dt>
+                <dd>
+                    <a id="red" href="#">排卵试纸</a>
+                    <a href="#">早孕试纸</a>
+                    <a href="#" id="red">电子试孕笔</a>
+                    <a href="#" id="red">精子检测</a>
+                    <a href="#">大卫</a>
+                    <a href="#">诗婷</a>
+                    <a href="#">可丽蓝</a>
+
+                </dd>
+            </dl>
+            <dl class="er">
+                <img src="img/14.jpg" alt="" style="margin: 30px;">
+                <img src="img/18.jpg" alt="" style="margin: 30px;">
+                <img src="img/20.jpg" alt="" style="margin: 30px;">
+            </dl>
+            </div>
+            </a>
+        </li>
+        <li>
+            <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>
+            <a href="listPage.html">母婴专区
+                        <div class="erJ8">
+                            <dl class="er">
+                                <dt><a href="#" >透明隐形眼镜</a></dt>
+            <dd>
+                <a href="#" id="red">验孕备孕</a>
+                <a href="#">试孕排卵</a>
+                <a href="#">试孕排卵</a>
+                <a href="#">试孕排卵</a>
+                <a href="#">试孕排卵</a>
+                <a href="#">试孕排卵</a>
+            </dd>
+            <dt><a href="#" >宝宝洗护</a></dt>
+            <dd>
+                <a href="#">补血补气</a>
+                <a href="#" id="red">补肾壮阳</a>
+                <a href="#">减肥瘦身</a>
+                <a href="#"> 增强抵抗力</a>
+                <a href="#">安神助眠</a>
+                <a href="#">免疫调节</a>
+            </dd>
+            <dt><a href="#">产后修复</a></dt>
+            <dd>
+                <a href="#" id="red">美白瘦斑</a>
+                <a href="#">脑血管病</a>
+                <a href="#">冠心病</a>
+                <a href="#">高血脂</a>
+                <a href="#">心绞痛</a>
+                <a href="#">静脉曲张</a>
+                <a href="#">心力衰竭</a>
+                <a hrf="#">血液病</a>
+            </dd>
+
+            </dl>
+            <dl class="er">
+                <dt><a href="#">孕妇营养</a></dt>
+                <dd>
+                    <a id="red" href="#"></a>
+                    <a href="#">骨关节炎</a>
+                    <a href="#">跌打骨伤</a>
+                    <a href="#">腰椎病</a>
+                    <a href="#">骨质疏松</a>
+                    <a href="#">痛风</a>
+                    <a href="#">外用贴膏</a>
+                    <a href="#">器官移植</a>
+                    <a href="#">骨质增生</a>
+                    <a href="#">股骨头坏死</a>
+                </dd>
+                <dt><a href="#">宝宝营养</a></dt>
+                <dd>
+                    <a href="#">钙</a>
+                    <a href="#">锌</a>
+                    <a id="red" href="#">镁</a>
+                    <a href="#">维生素</a>
+                    <a href="#">维生素</a>
+                    <a href="#">维生素</a>
+                    <a href="#">维生素</a>
+                    <a href="#">维生素</a>
+
+                </dd>
+                <dt><a href="#">热销大牌</a></dt>
+                <dd>
+                    <a href="#">合生元</a>
+                    <a href="#">澳臻</a>
+                    <a href="#">喜宝</a>
+                </dd>
+            </dl>
+            <dl class="er">
+                <img src="img/30.jpg" alt="" style="margin: 30px;">
+                <img src="img/31.jpg" alt="" style="margin: 30px;">
+            </dl>
+            </div>
+            </a>
+        </li>
+        <li>
+            <span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+            <a href="listPage.html">参茸花茶、休闲零食
+                        <div class="erJ9">
+                            <dl class="er">
+                                <dt><a href="#" >维生素</a></dt>
+            <dd>
+                <a href="#" id="red">维生素A</a>
+                <a href="#">维生素B</a>
+                <a href="#">维生素C</a>
+                <a href="#">维生素D</a>
+                <a href="#">维生素E</a>
+                <a href="#">维生素F</a>
+            </dd>
+            <dt><a href="#" >钙剂</a></dt>
+            <dd>
+                <a href="#">补血补气</a>
+                <a href="#" id="red">补肾壮阳</a>
+                <a href="#">减肥瘦身</a>
+                <a href="#"> 增强抵抗力</a>
+                <a href="#">安神助眠</a>
+                <a href="#">免疫调节</a>
+            </dd>
+            <dt><a href="#">热销品牌</a></dt>
+            <dd>
+                <a href="#" id="red">美白瘦斑</a>
+                <a href="#">脑血管病</a>
+                <a href="#">冠心病</a>
+                <a href="#">高血脂</a>
+                <a href="#">心绞痛</a>
+                <a href="#">静脉曲张</a>
+                <a href="#">心力衰竭</a>
+                <a hrf="#">血液病</a>
+            </dd>
+
+            </dl>
+            <dl class="er">
+                <dt><a href="#">叶酸</a></dt>
+                <dd>
+                    <a id="red" href="#"></a>
+                    <a href="#">骨关节炎</a>
+                    <a href="#">跌打骨伤</a>
+                    <a href="#">腰椎病</a>
+                    <a href="#">骨质疏松</a>
+                    <a href="#">痛风</a>
+                    <a href="#">外用贴膏</a>
+                    <a href="#">器官移植</a>
+                    <a href="#">骨质增生</a>
+                    <a href="#">股骨头坏死</a>
+                </dd>
+                <dt><a href="#">矿物质</a></dt>
+                <dd>
+                    <a href="#">皮炎/湿疹/脚气</a>
+                    <a href="#">脱发</a>
+                    <a id="red" href="#">银屑病</a>
+                    <a href="#">痤疮</a>
+                    <a href="#">白癜风</a>
+                    <a href="#">尖锐湿疣</a>
+                    <a href="#">黄褐斑</a>
+                    <a href="#">疤痕</a>
+                    <a href="#">灰指甲</a>
+                    <a href="#">疱疹</a>
+                    <a href="#">烧烫创伤</a>
+                    <a href="#">过敏</a>
+                </dd>
+                <dt><a href="#">常见症状</a></dt>
+                <dd>
+                    <a href="#">感冒发烧</a>
+                    <a href="#">咳嗽</a>
+                    <a href="#">上火</a>
+                    <a href="#">小儿感冒</a>
+                    <a href="#">哮喘</a>
+                    <a href="#">支气管炎</a>
+                    <a href="#">慢性阻塞性肺病</a>
+                </dd>
+                <dt><a href="#">热销商家</a></dt>
+                <dd>
+                    <a href="#">感冒发烧</a>
+                    <a href="#">咳嗽</a>
+                    <a href="#">上火</a>
+                    <a href="#">小儿感冒</a>
+                    <a href="#">哮喘</a>
+                    <a href="#">支气管炎</a>
+                    <a href="#">慢性阻塞性肺病</a>
+                </dd>
+            </dl>
+            <dl>
+                <img src="img/37.jpg" alt="" style="margin: 30px;">
+                <img src="img/38.jpg" alt="" style="margin: 100px;">
+            </dl>
+            </div>
+            </a>
+        </li>
+        <li>
+            <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+            <a href="listPage.html">体验口腔治疗
+                        <div class="erJ10">
+                            <dl class="er">
+                                <dt><a href="#" >透明隐形眼镜</a></dt>
+            <dd>
+                <a href="#" id="red">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+                <a href="#">维生素</a>
+            </dd>
+            <dt><a href="#" >彩色隐形眼镜</a></dt>
+            <dd>
+                <a href="#">补血补气</a>
+                <a href="#" id="red">补肾壮阳</a>
+                <a href="#">减肥瘦身</a>
+                <a href="#"> 增强抵抗力</a>
+                <a href="#">安神助眠</a>
+                <a href="#">免疫调节</a>
+            </dd>
+            <dt><a href="#">按周期找</a></dt>
+            <dd>
+                <a href="#" id="red">美白瘦斑</a>
+                <a href="#">脑血管病</a>
+                <a href="#">冠心病</a>
+                <a href="#">高血脂</a>
+                <a href="#">心绞痛</a>
+                <a href="#">静脉曲张</a>
+                <a href="#">心力衰竭</a>
+                <a hrf="#">血液病</a>
+            </dd>
+
+            </dl>
+            <dl class="er">
+                <dt><a href="#">隐形眼镜护理液</a></dt>
+                <dd>
+                    <a id="red" href="#"></a>
+                    <a href="#">骨关节炎</a>
+                    <a href="#">跌打骨伤</a>
+                    <a href="#">腰椎病</a>
+                    <a href="#">骨质疏松</a>
+                    <a href="#">痛风</a>
+                    <a href="#">外用贴膏</a>
+                    <a href="#">器官移植</a>
+                    <a href="#">骨质增生</a>
+                    <a href="#">股骨头坏死</a>
+                </dd>
+                <dt><a href="#">隐形眼镜伴侣</a></dt>
+                <dd>
+                    <a href="#">皮炎/湿疹/脚气</a>
+                    <a href="#">脱发</a>
+                    <a id="red" href="#">银屑病</a>
+                    <a href="#">痤疮</a>
+                    <a href="#">白癜风</a>
+                    <a href="#">尖锐湿疣</a>
+                    <a href="#">黄褐斑</a>
+                    <a href="#">疤痕</a>
+
+                </dd>
+                <dt><a href="#">功能眼镜</a></dt>
+                <dd>
+                    <a href="#">老花镜</a>
+
+                </dd>
+            </dl>
+            <dl>
+                <dt id="red">专家指导——健康美丽眼</dt>
+                <dd>
+                    <a href="#">第一次带隐形眼镜注意什么？</a>
+                </dd>
+            </dl>
+            </div>
+            </a>
+        </li>
+        </ul>
+        </div>
+        <!-- 右边 -->
+        <div class="block-lr">
+            <!-- <div class="shuJ">
+                <ul>
+                    <li><img src="img/xq1.jpg" alt=""> </li>
+                    <li>54.9</li>
+                    <li>钙尔奇 碳酸钙D3片 60片高浓</li>
+                    <li>加入购物车</li>
+                </ul>
+            </div> -->
+
+        </div>
+        </div>
+
+    </section>
+
+    <script>
+        var data2 = [{
+            pimg: "img/xq1.jpg",
+            pname: "钙尔奇 碳酸钙D3片 60片高浓",
+            pprice: 54.9,
+            uid: 202091
+        }, {
+            pimg: "img/xq2.jpg",
+            pname: "21金维他 多维元素片(21)",
+            pprice: 51.9,
+            uid: 202091
+        }, {
+            pimg: "img/xq3.jpg",
+            pname: "伊可新 维生素AD滴液",
+            pprice: 33.9,
+            uid: 202091
+        }, {
+            pimg: "img/xq4.jpg",
+            pname: "伊可新 维生素AD滴液(新包装)",
+            pprice: 33.9,
+            uid: 202091
+        }, {
+            pimg: "img/xq5.jpg",
+            pname: "龙牡 龙牡壮骨颗粒 无糖性",
+            pprice: 98,
+            uid: 202091
+        }, {
+            pimg: "img/xq6.jpg",
+            pname: "金钙尔奇 碳酸钙D30片",
+            pprice: 119,
+            uid: 202091
+        }, {
+            pimg: "img/xq7.jpg",
+            pname: "养生堂 天然维生素C",
+            pprice: 84,
+            uid: 202091
+        }, {
+            pimg: "img/xq8.jpg",
+            pname: "康恩贝派 维生素C",
+            pprice: 76,
+            uid: 202091
+        }, {
+            pimg: "img/xq9.jpg",
+            pname: "天然维生素E",
+            pprice: 102,
+            uid: 202091
+        }, {
+            pimg: "img/xq10.jpg",
+            pname: "复方葡萄糖酸钙口服液",
+            pprice: 45,
+            uid: 202091
+        }, {
+            pimg: "img/xq11.jpg",
+            pname: "维生素C片",
+            pprice: 42,
+            uid: 202091
+        }, {
+            pimg: "img/xq12.jpg",
+            pname: "康恩贝派 维生素C(香橙口味)",
+            pprice: 79,
+            uid: 202091
+        }];
+        // 添加商品接口
+        /*    for (let i = 0; i < data2.length; i++) {
+            $.post("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", data2[i], data => {
+                console.log(data);
+            });
+           } */
+        //     // 取商品数据
+        $.get("http://jx.xuzhixiang.top/ap/api/productlist.php", {
+            uid: 202091
+        }, data => {
+            console.log(data)
+            let str = "";
+            for (let j = 0; j < data.data.length; j++) {
+                str += `
+                    <div class="shuJ">
+                    <ul>
+                        <li><a href="detailPage.html?id=${j}"><img src="${data.data[j].pimg}"></a> </li>
+                        <li>￥${data.data[j].pprice}</li>
+                        <li>${data.data[j].pname}</li>
+                        <li class="btn" data-id="${data.data[j].pid}">加入购物车</li>
+                    </ul>
+                    </div>
+                    `;
+            }
+            $(".block-lr").html(str);
+            var oBtn = document.querySelectorAll(".btn");
+            // console.log(oBtn)
+            for (let i = 0; i < oBtn.length; i++) {
+                oBtn[i].onclick = function() {
+                    // console.log("aa")
+                    let id = oBtn[i].getAttribute("data-id");
+                    console.log(id)
+                    $.get("http://jx.xuzhixiang.top/ap/api/add-product.php", {
+                        uid: 202091,
+                        pnum: 1,
+                        pid: id
+                    }, data => {
+                        console.log(data);
+                    })
+                }
+            }
+        })
+    </script>
 </body>
+
 
 </html>

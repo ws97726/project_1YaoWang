@@ -23,12 +23,12 @@
             <!-- 登录名 -->
             <div class="list-a" id="div1">
                 <span class="glyphicon glyphicon-user" id="span-a" aria-hidden="true"></span>
-                <input type="text" placeholder="邮箱/手机号/用户名" class="input-a">
+                <input type="text" placeholder="邮箱/手机号/用户名" class="input-a" id="btn2">
             </div>
             <!-- 密码 -->
             <div class="list-a" id="div2">
                 <span class="glyphicon glyphicon-lock" id="span-a" aria-hidden="true"></span>
-                <input type="password" placeholder="登录密码" class="input-a">
+                <input type="password" placeholder="登录密码" class="input-a" id="btn3">
                 <a href="#" class="a1">忘记密码？</a>
             </div>
             <!-- 验证码 -->
@@ -39,10 +39,10 @@
                 </div>
             </div>
             <!-- 复选框 -->
-            <p class="p_fx"><input type="checkbox"> 两周内免登录</p>
+            <p class="p_fx"><input type="checkbox" id="bt"> 两周内免登录</p>
             <!-- 登录 -->
             <div class="list-c">
-                <input type="button" value="登录">
+                <input type="button" value="登录" id="btn">
                 <p>登录即代表你已同意1药网<a href="#">《服务协议》</a> 和 <a href="#">《隐私条款》</a></p>
             </div>
             <div class="list-d">
@@ -71,6 +71,7 @@
         </div>
     </footer>
 </body>
+<script src="js/cookie.js"></script>
 <script>
     //随机数
 
@@ -87,7 +88,7 @@
     })
 
     $("#div1").on("click", function() {
-        console.log("a")
+        // console.log("a")
         $("#div1").css({
             "borderColor": "#0083ce"
         })
@@ -98,9 +99,43 @@
         })
     })
     $("#div3").on("click", function() {
-        $("#div3").css({
-            "borderColor": "#0083ce"
+            $("#div3").css({
+                "borderColor": "#0083ce"
+            })
         })
+        // 登录接口
+    $("#btn").click(function() {
+            $.get("http://jx.xuzhixiang.top/ap/api/login.php", {
+                username: $("#btn2").val(),
+                password: $("#btn3").val()
+            }, data => {
+                console.log(data)
+                if (data.code) {
+                    alert(data.msg);
+                    location.href = "SYePage.html";
+                } else {
+                    alert(data.msg);
+
+                }
+            })
+        })
+        // 记住密码
+    if (getCookie("username")) {
+        $("#btn2").val(getCookie("username"));
+        $("#btn3").val(getCookie("password"));
+        $("#bt").checked = true;
+    }
+    $("#bt").click(function() {
+        if ($("#btn2").checked) {
+            var val1 = $("#btn2").val();
+            var val2 = $("#btn3").val();
+            setCookie("username", val1, 14);
+            setCookie("password", val2, 14);
+        } else {
+            removeCookie("username");
+        }
+
+
     })
 </script>
 
