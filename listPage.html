@@ -57,7 +57,7 @@
                         <ul class="site-nav-bd-r">
                             <li class="menu">
                                 <div id="logininfo" class="menu-hd">
-                                    <a target="_self" class="red mr5" href="DLvPage.html" style="color: red; margin-right: 10px;"></a>
+                                    <a target="_self" class="red mr5" href="DLvPage.html" style="color: red; margin-right: 10px;" id="logging">请登录</a>
                                     <a target="_self" href="ZCePage.html"></a>
                                 </div>
                             </li>
@@ -120,7 +120,7 @@
             <!-- 购物车 -->
             <div class="dataa">
                 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                <a href="cartList.html">购物车 ></a></a>
+                <a href="cartList.html" id="">购物车 ></a></a>
             </div>
         </div>
         <!-- 头部3 -->
@@ -1089,20 +1089,127 @@
             pprice: 79,
             uid: 202091
         }];
+        var data3 = [{
+            pimg: "img/10.jpg",
+            pname: "钙尔奇 碳酸钙D3片 60片高浓",
+            pprice: 54.9,
+            uid: 20202093
+        }, {
+            pimg: "img/11.jpg",
+            pname: "21金维他 多维元素片(21)",
+            pprice: 51.9,
+            uid: 20202093
+        }, {
+            pimg: "img/12.jpg",
+            pname: "伊可新 维生素AD滴液",
+            pprice: 33.9,
+            uid: 20202093
+        }, {
+            pimg: "img/13.jpg",
+            pname: "伊可新 维生素AD滴液(新包装)",
+            pprice: 33.9,
+            uid: 20202093
+        }, {
+            pimg: "img/14.jpg",
+            pname: "龙牡 龙牡壮骨颗粒 无糖性",
+            pprice: 98,
+            uid: 20202093
+        }, {
+            pimg: "img/15.jpg",
+            pname: "金钙尔奇 碳酸钙D30片",
+            pprice: 119,
+            uid: 20202093
+        }, {
+            pimg: "img/16.jpg",
+            pname: "养生堂 天然维生素C",
+            pprice: 84,
+            uid: 20202093
+        }, {
+            pimg: "img/17.jpg",
+            pname: "康恩贝派 维生素C",
+            pprice: 76,
+            uid: 20202093
+        }, {
+            pimg: "img/18.jpg",
+            pname: "天然维生素E",
+            pprice: 102,
+            uid: 20202093
+        }, {
+            pimg: "img/19.jpg",
+            pname: "复方葡萄糖酸钙口服液",
+            pprice: 45,
+            uid: 20202093
+        }, {
+            pimg: "img/20.jpg",
+            pname: "维生素C片",
+            pprice: 42,
+            uid: 20202093
+        }, {
+            pimg: "img/21.jpg",
+            pname: "康恩贝派 维生素C(香橙口味)",
+            pprice: 79,
+            uid: 20202093
+        }, {
+            pimg: "img/22.jpg",
+            pname: "康恩贝派 维生素C(香橙口味)",
+            pprice: 79,
+            uid: 20202093
+        }, {
+            pimg: "img/23.jpg",
+            pname: "康恩贝派 维生素C(香橙口味)",
+            pprice: 79,
+            uid: 20202093
+        }, {
+            pimg: "img/24.jpg",
+            pname: "康恩贝派 维生素C(香橙口味)",
+            pprice: 79,
+            uid: 20202093
+        }, {
+            pimg: "img/25.jpg",
+            pname: "康恩贝派 维生素C(香橙口味)",
+            pprice: 79,
+            uid: 20202093
+        }];
         // 添加商品接口
-        /*    for (let i = 0; i < data2.length; i++) {
-            $.post("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", data2[i], data => {
+        /* for (let i = 0; i < data3.length; i++) {
+            $.post("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", data3[i], data => {
                 console.log(data);
             });
-           } */
+        } */
         //     // 取商品数据
-        $.get("http://jx.xuzhixiang.top/ap/api/productlist.php", {
-            uid: 202091
-        }, data => {
-            console.log(data)
-            let str = "";
-            for (let j = 0; j < data.data.length; j++) {
-                str += `
+        var uid = JSON.parse(localStorage.getItem("uid"));
+        if (uid == null) {
+            $.get("http://jx.xuzhixiang.top/ap/api/productlist.php", {
+                uid: 20202093
+            }, data => {
+                console.log(data)
+                let str = "";
+                for (let j = 0; j < data.data.length; j++) {
+                    str += `
+                            <div class="shuJ">
+                            <ul>
+                                <li><a href="detailPage.html?id=${j}"><img src="${data.data[j].pimg}"></a> </li>
+                                <li>￥${data.data[j].pprice}</li>
+                                <li>${data.data[j].pname}</li>
+                                <li class="btn" data-id="${data.data[j].pid}"><a href="DLvPage.html">加入购物车</a></li>
+                            </ul>
+                            </div>
+                            `;
+                }
+                $(".block-lr").html(str);
+                return;
+            })
+        } else if (uid[0] == 202091) {
+            // console.log("aa")
+            $("#logging").html("登录中")
+
+            $.get("http://jx.xuzhixiang.top/ap/api/productlist.php", {
+                uid: 202091
+            }, data => {
+                console.log(data)
+                let str = "";
+                for (let j = 0; j < data.data.length; j++) {
+                    str += `
                     <div class="shuJ">
                     <ul>
                         <li><a href="detailPage.html?id=${j}"><img src="${data.data[j].pimg}"></a> </li>
@@ -1112,26 +1219,27 @@
                     </ul>
                     </div>
                     `;
-            }
-            $(".block-lr").html(str);
-            var oBtn = document.querySelectorAll(".btn");
-            // console.log(oBtn)
-            //加入购物车
-            for (let i = 0; i < oBtn.length; i++) {
-                oBtn[i].onclick = function() {
-                    // console.log("aa")
-                    let id = oBtn[i].getAttribute("data-id");
-                    console.log(id)
-                    $.get("http://jx.xuzhixiang.top/ap/api/add-product.php", {
-                        uid: 202091,
-                        pnum: 1,
-                        pid: id
-                    }, data => {
-                        console.log(data);
-                    })
                 }
-            }
-        })
+                $(".block-lr").html(str);
+                var oBtn = document.querySelectorAll(".btn");
+                // console.log(oBtn)
+                //加入购物车
+                for (let i = 0; i < oBtn.length; i++) {
+                    oBtn[i].onclick = function() {
+                        // console.log("aa")
+                        let id = oBtn[i].getAttribute("data-id");
+                        console.log(id)
+                        $.get("http://jx.xuzhixiang.top/ap/api/add-product.php", {
+                            uid: 202091,
+                            pnum: 1,
+                            pid: id
+                        }, data => {
+                            console.log(data);
+                        })
+                    }
+                }
+            })
+        }
     </script>
 </body>
 

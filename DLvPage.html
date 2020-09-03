@@ -105,21 +105,24 @@
         })
         // 登录接口
     $("#btn").click(function() {
-            $.get("http://jx.xuzhixiang.top/ap/api/login.php", {
-                username: $("#btn2").val(),
-                password: $("#btn3").val()
-            }, data => {
-                console.log(data)
-                if (data.code) {
-                    alert(data.msg);
-                    location.href = "SYePage.html";
-                } else {
-                    alert(data.msg);
+        $.get("http://jx.xuzhixiang.top/ap/api/login.php", {
+            username: $("#btn2").val(),
+            password: $("#btn3").val()
+        }, data => {
+            console.log(data)
+            if (data.code) {
+                alert(data.msg);
+                let uid = [202091]
+                localStorage.setItem("uid", JSON.stringify(uid))
+                location.href = "SYePage.html";
+            } else {
+                alert(data.msg);
 
-                }
-            })
+            }
         })
-        // 记住密码
+    })
+
+    // 记住密码
     if (getCookie("username")) {
         $("#btn2").val(getCookie("username"));
         $("#btn3").val(getCookie("password"));

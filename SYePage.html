@@ -56,7 +56,7 @@
                         <ul class="site-nav-bd-r">
                             <li class="menu">
                                 <div id="logininfo" class="menu-hd">
-                                    <a target="_self" class="red mr5" href="DLvPage.html" style="color: red; margin-right: 10px;"> 请登录 </a><a target="_self" href="ZCePage.html">注册</a>
+                                    <a target="_self" class="red mr5" href="DLvPage.html" style="color: red; margin-right: 10px;" id="logging"> 请登录 </a><a target="_self" href="ZCePage.html">注册</a>
                                 </div>
                             </li>
                             <li class="menu">
@@ -1963,42 +1963,49 @@
 <script>
     //楼梯 
     $(function() {
-        $(window).scroll(function() {
-            var st = $(this).scrollTop();
-            $("#sidebar div").each(function() {
-                // console.log(this)
-                if (st >= $(this).offset().top - $(this).outerHeight() / 2) {
-                    var index = $(this).index();
-                    // console.log(index)
-                    // console.log($("#floorNav li"))
-                    $("#floorNav li").eq(index).addClass("hover")
-                        .siblings().removeClass("hover");
-                    $("#sidebar div .pf").eq(index).addClass("hover")
-                        .parent().siblings().children(".pf").removeClass("hover");
+            $(window).scroll(function() {
+                var st = $(this).scrollTop();
+                $("#sidebar div").each(function() {
+                    // console.log(this)
+                    if (st >= $(this).offset().top - $(this).outerHeight() / 2) {
+                        var index = $(this).index();
+                        // console.log(index)
+                        // console.log($("#floorNav li"))
+                        $("#floorNav li").eq(index).addClass("hover")
+                            .siblings().removeClass("hover");
+                        $("#sidebar div .pf").eq(index).addClass("hover")
+                            .parent().siblings().children(".pf").removeClass("hover");
 
+                    }
+                });
+                // console.log($(window).scrollTop())
+                if ($(window).scrollTop() >= 750 && $(window).scrollTop() < 5000) {
+                    $("#floorNav").fadeIn();
+                } else {
+                    $("#floorNav").fadeOut();
                 }
+
             });
-            // console.log($(window).scrollTop())
-            if ($(window).scrollTop() >= 750 && $(window).scrollTop() < 5000) {
-                $("#floorNav").fadeIn();
-            } else {
-                $("#floorNav").fadeOut();
-            }
+            $("#floorNav li:not(:last)").click(function() {
+                var index = $(this).index();
+                $("html,body").stop().animate({
+                    "scrollTop": $("#sidebar div").eq(index).offset().top
+                }, 500);
+            })
 
-        });
-        $("#floorNav li:not(:last)").click(function() {
-            var index = $(this).index();
-            $("html,body").stop().animate({
-                "scrollTop": $("#sidebar div").eq(index).offset().top
-            }, 500);
+            $("#floorNav li").last().click(function() {
+                $("html").stop().animate({
+                    scrollTop: 0
+                }, 500);
+            })
         })
-
-        $("#floorNav li").last().click(function() {
-            $("html").stop().animate({
-                scrollTop: 0
-            }, 500);
-        })
-    })
+        //判断用户是否登录
+        // console.log(localStorage.getItem("uid"))
+    var uid = JSON.parse(localStorage.getItem("uid"));
+    // console.log(uid[0])
+    if (uid[0] == 202091) {
+        $("#logging").html("登录中")
+    }
 </script>
 
 </html>
